@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShelfShare | Login</title>
+  <link rel="stylesheet" href="Style/login-style.css">
+</head>
+<body>
+
+  <div class="about">
+    <h1 id="title">About Us</h1>
+    <p id="paragraph1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque minima sunt esse vel ut odit libero, 
+      repellendus inventore eligendi sint quis at impedit labore consectetur. Excepturi culpa omnis voluptate consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsam voluptatum commodi expedita. Exercitationem, ipsa officiis,
+      ratione quidem odit fugit mollitia repudiandae dolor hic at expedita eos nam laboriosam. Quis.</p>
+  </div>
+
+  <img id="logo" src="img\ShelfShare-removebg-preview.png" onclick="window.location.href='index.html'">
+  <img id="bookshelf" src="img\bookshelf.png" alt="Book shelf">
+  <img class="cover" src="img\open-blank-book-pages-beige_53876-380234-removebg-preview.png" alt="">
+  
+  <div class="signin-form">
+
+    <h2 id="signin">Sign In</h2>
+    
+    <div class="form">
+      <div class="myform">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="type your email" >
+      </div>
+    
+      <div class="myform">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="type your password">
+      </div>
+
+        <a href="" id="Forgotten-pass">Forgotten password?</a>
+
+        <div class="remember-me">
+          <input type="checkbox" name="remember-me" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+        
+        <button id="login-button" type="submit">Login</button>
+
+        <div class="new_account">
+          <h6>Don't have an account?<a href="Signup.html" id="button">Create one</a></h6>
+        </div>
+
+        
+    </div>
+    
+  </div>
+
+  <script>
+    const users = [
+      { email: "ahmed.salim@example.com",   password: "P@ssw0rd!2025" },
+      { email: "mona.khaled@example.com",   password: "Sunshine#91" },
+      { email: "omar.hassan@example.com",   password: "BlueLake$77" },
+      { email: "fatma.yousry@example.com",  password: "R3dApple!33" },
+      { email: "tarek.salah@example.com",   password: "MyBookShelf@8" },
+      { email: "sara.ibrahim@example.com",  password: "Coffee&Code12" },
+      { email: "mohamed.ali@example.com",   password: "GreenTree#45" },
+      { email: "layla.mostafa@example.com", password: "MoonLight*09" },
+      { email: "hany.adel@example.com",     password: "AlphaBeta!56" },
+      { email: "nourhan.samir@example.com", password: "HelloWorld$1" }
+    ];
+
+
+    document.getElementById("login-button").addEventListener("click", () => {
+      let email = document.getElementById("email");
+      let pass = document.getElementById("password");
+
+      let check =0 ;
+      users.forEach(user => {
+      if(user.email === email.value && user.password === pass.value){
+        window.location.href = 'index.html';
+        check = 1;
+        return;
+      }
+      })
+      if(check === 0){
+        alert("email or password is wrong");
+      }
+      
+    email.value= "";
+    pass.value = "";
+
+    })
+
+  </script>
+</body>
+</html>

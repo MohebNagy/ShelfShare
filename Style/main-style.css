@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    background: #ebeae0;
+    font-family: "DM Serif Text", serif;
+    color: #333;
+}
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    padding: 1%;
+    width: 100%;
+}
+#logo {
+    /* position: relative; */
+    width: 12%;
+    height: 6%;
+    cursor: pointer;
+} 
+.nav-bar {
+    position: relative;
+    list-style: none;
+    display: flex;
+    left: 22%;
+    gap: 35px;
+    top: 1.5%;
+    color: #333;
+    z-index: 2;
+} 
+.nav-bar li {
+    font-size: 110%;
+} 
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+}
+#highlighter{
+    position: relative;
+    width: 430px;
+    height: 60px;
+    right: 3%;
+    top: -4px;
+    z-index: 1;
+}
+.btns {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    left: 17%;
+}
+.btns button { 
+    position: relative; 
+    border-radius: 15px;
+}
+button {
+    cursor: pointer;
+}
+#signup-btn {
+    color: #ebeae0;
+    background-color: #5c3d2e;
+    border-color: #8b5e3c;
+    font-size: 90%;
+    padding: 7px 15px;
+}
+#signup-btn:hover {
+    background-color: #8e5a44;
+}
+#login-btn {
+    color: #333;
+    background-color: white;
+    border: none;
+    font-size: 100%;
+    gap: 6px;
+}
+#login-btn img {
+    position: relative;
+    width:15px;
+    top: 2px;
+}
+
+.sec1 {
+    display: flex;
+    text-align: center;
+    color: white;
+}
+.sec1 img {
+    position: relative;
+    width: 100%;
+    z-index: 12;
+}
+.sec1 h1 {
+    position: absolute;
+    z-index: 13;
+    left: 40%;
+    top: 290px;
+    width: 300px;
+}
+
+.search {
+    max-width: 100vw;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    top: 90%;
+    right: 25%;
+    font-size: 150%;
+    gap: 20px;
+    align-items: center;
+}
+.search input {
+    width: 600px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 60%;
+}
+.search button{
+    background-color: #5c3d2e;
+    color: #ebeae0;
+    border-radius: 5px;
+    border-color: #8b5e3c;
+    font-size: 60%;
+    padding: 5px 10px;
+}
+.search button:hover{
+    background-color: #8b5e3c;
+}
+
+.filtering {
+    max-width: 100vw;
+    box-sizing: border-box;
+    position: absolute;
+    top: 90%;
+}
+.filtering h1 {
+    font-size: 200%;
+}
+.filter h2 {
+    position: relative;
+    margin-left: 5%;
+    top: 25px;
+}
+.filter-type {
+    position: relative;
+    padding-bottom: 45px;
+    right: 15px;
+}
+
+.filter-type h3 {
+    position: absolute;
+    font-size: 130%;
+    left: 30%;
+    top: 3px;
+    z-index: 15;
+}
+.filter-type button {
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 80%;
+}
+.filter-type img {
+    position: absolute;
+    width: 150px;
+    z-index: 14;
+}
+#nov {
+    position: relative;
+    transition: transform 0.2s;
+}
+#nov.active {
+    transform: translateX(15px);
+}
+#boo {
+    position: relative;
+    transition: transform 0.2s;
+}
+#boo.active {
+    transform: translateX(15px);
+}
+
+#store {
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 5%;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+.book-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.book-card:hover {
+    transform: translateY(-5px);
+}
+.book-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.book-content {
+    padding: 10px;
+}
+.discount-tag {
+    background: #d32f2f;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px  6px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.book-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0;
+    color: #333;
+}
+.book-desc {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 10px 0;
+    height: 20px;
+    overflow: hidden;
+}
+.book-owner {
+    font-size: 10px;
+    color: #777;
+}
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+  z-index: 120;
+  transition: color 0.3s;
+}
+.wishlist-btn.active {
+    color: gray;
+}
+
+.pages {
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    gap: 75%;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: -30px;
+    padding-bottom: 10%;
+}
+.pages button{
+    background-color: #5c3d2e;
+    color: #ebeae0;
+    border-radius: 5px;
+    border-color: #8b5e3c;
+    font-size: 85%;
+    padding: 5px 10px;
+    display: none;
+}
+.pages button:hover{
+    background-color: #8b5e3c;
+}
+
+.back_to_top {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    background: none;
+    border: none;
+    z-index: 200;
+}
+.back_to_top img {
+    width: 70px;
+    height: 70px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 90%;
+}
+footer .socials {
+    margin-top: 10px;
+}
+footer .socials a {
+    margin: 0 10px;
+    color: #f4d03f;
+    text-decoration: none;
+    font-size: 120%;
+}
+footer .socials img {
+    width: 20px;
+}

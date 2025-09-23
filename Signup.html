@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShelfShare | Sign Up</title>
+  <link rel="stylesheet" href="Style/signup-style.css">
+</head>
+<body>
+
+
+  <img id="logo" src="img\ShelfShare-removebg-preview.png" onclick="window.location.href='index.html'">
+  <img id="bookshelf" src="img\bookshelf.png" alt="Book shelf">
+  <img class="cover" src="img\open-blank-book-pages-beige_53876-380234-removebg-preview.png" alt="">
+  
+  <div class="profile">
+      <img src="img/default_profile_pic.png" id="profile-pic">
+      <label for="in-pic" id="profile-label">Upload your profile picture</label>
+      <input type="file" accept="image/jpeg , image/jpg , image/png" id="in-pic">
+  </div>
+
+  <div class="id">
+      <div class="pic">
+        <img src="img/front_id.jpg" id="front-pic">
+        <label for="in-front-pic">Front ID picture</label>
+        <input type="file" accept="image/jpeg , image/jpg , image/png" id="in-front-pic">
+      </div>
+      <div class="pic">
+        <img src="img/front_id.jpg" id="back-pic">
+        <label for="in-back-pic">Back ID picture</label>
+        <input type="file" accept="image/jpeg , image/jpg , image/png" id="in-back-pic">
+      </div>
+  </div>
+
+
+  <div class="signin-form">
+    <h2 id="signup">Sign Up</h2>
+    
+    <div class="form">
+      <div class="myform">
+        <label for="first-name">First name</label>
+        <input type="text" name="first-name" id="first-name" placeholder="type your first name" >
+      </div>
+    
+      <div class="myform">
+        <label for="last-name">Last name</label>
+        <input type="text" name="last-name" id="last-name" placeholder="type your last name">
+      </div>
+      
+      <div class="myform">
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" placeholder="type your address" >
+      </div>
+      <div class="myform">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="type your email address" >
+      </div>
+      <div class="myform">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="type your password" >
+      </div>
+      <div class="myform">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="type your password again" >
+      </div>
+      
+        
+        <button id="signup-button" type="submit" onclick="window.location.href='index.html'">Sign Up</button>
+
+        <div class="have_account">
+          <h6>Have an account?<a href="login.html" id="button">Sign In</a></h6>
+        </div>
+
+        
+    </div>
+    
+  </div>
+
+  <script>
+
+    function changePic(defPic, inpic){
+      let profilePic = document.getElementById(defPic);
+      let userPic = document.getElementById(inpic);
+      profilePic.src = URL.createObjectURL(userPic.files[0]);
+    }
+
+    document.getElementById("in-pic").addEventListener("change" , function(){
+      changePic("profile-pic","in-pic");
+    })
+
+    document.getElementById("in-front-pic").addEventListener("change" , function(){
+      changePic("front-pic","in-front-pic");
+    })
+
+    document.getElementById("in-back-pic").addEventListener("change" , function(){
+      changePic("back-pic","in-back-pic");
+    })
+</script>
+
+
+</body>
+</html>

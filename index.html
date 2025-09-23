@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShelfShare</title>
+    <link rel="stylesheet" href="Style/main-style.css">
+</head>
+<body>
+
+    <header>
+        <img id="logo" src="img\ShelfShare-removebg-preview.png" onclick="window.location.href='#'">
+        <ul class="nav-bar">
+            <li><a href="">Home</a></li>
+            <li><a href="">Cart</a></li>
+            <li><a href="">Wish list</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <img id="highlighter" src="img/highlighter.png">
+        <div class="btns">
+            <button type="button" id="login-btn"><img src="img/login_icon.png">  Login</button>
+            <button type="button" id="signup-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="sec1">
+            <h1>Read Together, Grow Together</h1>
+            <img src="img/main-background.jpg">
+        </div>
+    </div>
+    <div class="search">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Search by (book title, author, owner, or category)">
+        <button>Search</button>
+    </div>
+    <div class="filtering">
+        <h1>Filtering</h1>
+        <div class="filter">
+            <h2>Type</h2>
+            <div class="filter-type">
+                <div id="nov">
+                    <img src="img/s1.png">
+                    <h3><button value="novel">Novels</button></h3>
+                </div>
+            </div>
+            <div class="filter-type">
+                <div id="boo">
+                    <img src="img/s2.png">
+                    <h3><button value="book">Books</button></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="store"></div>
+  <div class="pages">
+      <button onclick="prevPage()" id="prev-btn">Previous</button>
+      <button onclick="nextPage()" id="next-btn">Next</button>
+  </div>
+
+  <button class="back_to_top" id="back_to_top"><img src="img/back__to_top.png"></button>
+
+    <footer>
+    <p>&copy; 2025 ShelfShare. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="#"><img src="img/facebook_icon-removebg-preview.png"></a>
+      <a href="#"><img src="img/Instagram_icon-removebg-preview.png"></a>
+      <a href="#"><img src="img/linkedin-icon-removebg-preview.png"></a>
+      <a href="#"><img src="img/X-icon-removebg-preview.png"></a>
+    </div>
+  </footer>
+  
+    <script src="main-js.js"></script>
+
+</body>
+</html>
