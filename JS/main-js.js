@@ -216,16 +216,17 @@ filteredBooks.forEach(book => {
     } else {
         w = "♡";
     }
-    // onclick="window.location.href='#'"
+    
     bookCard.innerHTML = `
-    <div class="wishlist-btn">${w}</div>
-    <img src="${book.cover}" alt="${book.title}" class="book-image">
-    <div class="book-content">
-        <span class="discount-tag">36% off</span>
-        <h2 class="book-title">${book.title}</h2>
-        <p class="book-desc">${book.description}</p>
-        <p class="book-owner">📖 ${book.owner}</p>
-    </div>
+        <div class="wishlist-btn">${w}</div>
+        <img src="${book.cover}" alt="${book.title}" class="book-image">
+        <div class="book-content">
+            <span class="discount-tag">36% off</span>
+            <h2 class="book-title">${book.title}</h2>
+            <p class="book-desc">${book.description}</p>
+            <p class="book-owner">📖 ${book.owner}</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
     `;
     container.appendChild(bookCard);
 });
@@ -304,4 +305,5 @@ if (e.key === "Enter") {
     searchBooks();
 }
 });
+
 
