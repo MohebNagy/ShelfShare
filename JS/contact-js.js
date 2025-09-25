@@ -6,18 +6,23 @@
     })
     let backToTop = document.getElementById("back_to_top");
 
-    window.addEventListener("scroll" , () => {
-        if(window.scrollY > 200){
+    function  checkForScroll() {
+        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
             backToTop.style.display = "block";
         } else {
             backToTop.style.display = "none";
         }
-    })
-    backToTop.addEventListener("click" , () => {
-        window.scrollTo({top : 0 , behavior : "smooth"});
+    }
+    window.onload = checkForScroll();
+    window.addEventListener("scroll" , () => {
+        checkForScroll();
     });
 
+    backToTop.addEventListener("click" , () => {
+        window.scrollTo({top : 0 , behavior : "smooth"});
+    })
 
+    // window.onscroll = checkForScroll();
     document.getElementById("bookmark1").addEventListener("click" , () => {
         window.scrollTo({top : 700 , behavior : "smooth"});
     })

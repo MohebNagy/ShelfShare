@@ -280,12 +280,16 @@ document.querySelectorAll(".filter-type button").forEach(btn => {
 
 let backToTop = document.getElementById("back_to_top");
 
-window.addEventListener("scroll" , () => {
-    if(window.scrollY > 200){
+function  checkForScroll() {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
         backToTop.style.display = "block";
     } else {
         backToTop.style.display = "none";
     }
+}
+window.onload = checkForScroll();
+window.addEventListener("scroll" , () => {
+    checkForScroll();
 });
 
 backToTop.addEventListener("click" , () => {
