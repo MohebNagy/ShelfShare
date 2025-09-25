@@ -260,6 +260,22 @@ button {
 .wishlist-btn.active {
     color: gray;
 }
+.add-to-cart {
+  background-color: #5c3d2e;
+  color: #fff;
+  border: none;
+    align-content: center;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.add-to-cart:hover {
+  background-color: #7a523d;
+}
 
 .pages {
     max-width: 100vw;
@@ -319,3 +335,4 @@ footer .socials a {
 footer .socials img {
     width: 20px;
 }
+
