@@ -1,4 +1,5 @@
-    document.getElementById("login-btn").addEventListener("click" , function() {
+alert(1)
+document.getElementById("login-btn").addEventListener("click" , function() {
         window.location.href = "login.html";
     })
     document.getElementById("signup-btn").addEventListener("click" , function() {
